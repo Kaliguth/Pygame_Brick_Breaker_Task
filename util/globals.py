@@ -17,6 +17,8 @@ DARK_RED = 80, 30, 30
 BRICK_WIDTH = 182
 BRICK_HEIGHT = 50
 BRICK_ROWS = 4
+BRICK_SPACING_X = 2
+BRICK_SPACING_Y = 2
 
 # Fonts
 pygame.font.init()  # Initiate pygame font module

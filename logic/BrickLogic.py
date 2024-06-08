@@ -7,7 +7,7 @@ import random
 from objects.Brick import Brick
 
 # Import required global vars
-from util.globals import WIDTH, BRICK_WIDTH, BRICK_HEIGHT, BRICK_ROWS
+from util.globals import WIDTH, BRICK_WIDTH, BRICK_HEIGHT, BRICK_ROWS, BRICK_SPACING_X, BRICK_SPACING_Y
 
 
 class BrickLogic:
@@ -25,8 +25,8 @@ class BrickLogic:
         # loop to create bricks using rows and num_bricks vars
         for row in range(num_rows):
             for col in range(num_bricks_x):
-                x = col * BRICK_WIDTH  # Column
-                y = row * BRICK_HEIGHT  # Row
+                x = col * (BRICK_WIDTH + BRICK_SPACING_X)  # Column
+                y = row * (BRICK_HEIGHT + BRICK_SPACING_Y)  # Row
                 # Randomize color for the brick
                 color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
                 # Create the brick
